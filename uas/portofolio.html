@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Kami - Kedai Kopi Senja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">kedai<span>senja</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Tentang kami</a>
+        <a href="services.html">Services</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamberger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero-portfolio" id="portfolio-intro">
+      <main class="content">
+        <h1>Lihat <span>Karya Kami</span></h1>
+        <p>
+          Kami bangga dengan setiap proyek yang telah kami selesaikan. Jelajahi
+          studi kasus kami di sini.
+        </p>
+      </main>
+    </section>
+
+    <section id="project-showcase" class="project-showcase">
+      <h2>Portofolio <span>Proyek</span></h2>
+      <p class="section-description">
+        Berbagai proyek katering dan acara yang sukses kami selenggarakan.
+      </p>
+
+      <div class="filter-controls">
+        <button class="filter-btn active" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="korporat">Korporat</button>
+        <button class="filter-btn" data-category="privat">Privat</button>
+        <button class="filter-btn" data-category="workshop">Workshop</button>
+        <button class="filter-btn" data-category="kolaborasi">
+          Kolaborasi
+        </button>
+      </div>
+
+      <div class="portfolio-grid"></div>
+
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close-btn">&times;</span>
+        <img
+          class="lightbox-content"
+          id="lightbox-img"
+          src=""
+          alt="Project Image"
+        />
+        <a class="lightbox-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="lightbox-next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div id="projectDetailModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h3 id="modalProjectTitle"></h3>
+          <p id="modalProjectCategory"></p>
+          <div class="modal-gallery-thumbnail"></div>
+          <div class="modal-gallery-main">
+            <img src="" alt="" id="modalMainProjectImg" />
+          </div>
+          <p id="modalProjectDescription"></p>
+          <div id="modalClientTestimonial" class="client-testimonial">
+            <p class="quote"></p>
+            <p class="client-info"></p>
+          </div>
+          <div class="project-details-info">
+            <h4>Detail Proyek:</h4>
+            <ul id="modalProjectDetailsList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="sosials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="tiktok"></i></a>
+      </div>
+      
+      <div class="credit">
+        <p>Dibuat oleh <a href="">Gabriel Ketarou</a>. | &copy; 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/portfolio-script.js"></script>
+  </body>
+</html>

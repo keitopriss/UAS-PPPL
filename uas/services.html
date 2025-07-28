@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layanan & Produk - Kedai Kopi Senja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">kedai<span>senja</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Tentang kami</a>
+        <a href="services.html">Services</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamberger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero-services" id="services-intro">
+      <main class="content">
+        <h1>Temukan <span>Layanan & Produk</span> Kami</h1>
+        <p>
+          Kami menawarkan berbagai layanan dan produk kopi premium untuk
+          memenuhi setiap kebutuhan dan selera Anda.
+        </p>
+      </main>
+    </section>
+
+    <section id="service-catalog" class="service-catalog">
+      <h2>Katalog <span>Kami</span></h2>
+      <p class="section-description">
+        Jelajahi pilihan layanan dan produk kami. Gunakan filter untuk mencari
+        yang Anda inginkan!
+      </p>
+
+      <div class="filter-controls">
+        <button class="filter-btn active" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="kopi">Kopi</button>
+        <button class="filter-btn" data-category="makanan">Makanan</button>
+        <button class="filter-btn" data-category="catering">Katering</button>
+        <button class="filter-btn" data-category="event">Acara</button>
+      </div>
+
+      <div class="catalog-grid"></div>
+
+      <div id="itemDetailModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <img src="" alt="" id="modalItemImg" />
+          <h3 id="modalItemName"></h3>
+          <p id="modalItemDescription"></p>
+          <ul id="modalItemFeatures"></ul>
+          <span id="modalItemPrice" class="price"></span>
+          <button class="btn-primary add-to-cart">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="price-calculator" class="price-calculator">
+      <h2>Hitung <span>Estimasi Biaya</span></h2>
+      <p class="section-description">
+        Dapatkan perkiraan biaya untuk layanan katering atau acara Anda.
+      </p>
+
+      <div class="calculator-container">
+        <div class="calculator-form">
+          <div class="form-group">
+            <label for="serviceType">Pilih Layanan:</label>
+            <select id="serviceType">
+              <option value="catering-paket-a">Katering Paket A (Hemat)</option>
+              <option value="catering-paket-b">
+                Katering Paket B (Premium)
+              </option>
+              <option value="event-ruang-kecil">
+                Sewa Ruang Acara (Kecil)
+              </option>
+              <option value="event-ruang-besar">
+                Sewa Ruang Acara (Besar)
+              </option>
+              <option value="workshop-kopi">Workshop Kopi (per orang)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Jumlah (Orang/Jam/Paket):</label>
+            <input type="number" id="quantity" min="1" value="1" required />
+          </div>
+          <div class="form-group">
+            <label for="customRequests">Permintaan Khusus (opsional):</label>
+            <textarea
+              id="customRequests"
+              rows="3"
+              placeholder="Contoh: Tambah pilihan vegan, proyektor..."
+            ></textarea>
+          </div>
+          <button id="calculatePriceBtn" class="btn-primary">
+            Hitung Estimasi
+          </button>
+        </div>
+        <div class="calculator-result">
+          <h3>Estimasi Biaya:</h3>
+          <p id="estimatedPrice">Rp 0</p>
+          <small
+            >*Estimasi ini belum termasuk pajak dan biaya tambahan
+            lainnya.</small
+          >
+          <p class="result-note">
+            Hubungi kami untuk penawaran yang lebih rinci dan personal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison-table" class="comparison-table">
+      <h2>Perbandingan <span>Paket Katering</span></h2>
+      <p class="section-description">
+        Lihat detail perbedaan antara paket katering kami untuk membantu Anda
+        memilih yang terbaik.
+      </p>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Fitur</th>
+              <th>Paket A (Hemat)</th>
+              <th>Paket B (Premium)</th>
+              <th>Paket Kustom</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pilihan Kopi</td>
+              <td>2 Jenis</td>
+              <td>4 Jenis Premium</td>
+              <td>Sesuai Permintaan</td>
+            </tr>
+            <tr>
+              <td>Makanan Ringan</td>
+              <td>3 Pilihan Standard</td>
+              <td>5 Pilihan Gourmet</td>
+              <td>Sesuai Permintaan</td>
+            </tr>
+            <tr>
+              <td>Barista</td>
+              <td>1 Barista (4 Jam)</td>
+              <td>2 Barista Profesional (8 Jam)</td>
+              <td>Sesuai Permintaan</td>
+            </tr>
+            <tr>
+              <td>Peralatan</td>
+              <td>Standard</td>
+              <td>Premium & Dekorasi</td>
+              <td>Sesuai Permintaan</td>
+            </tr>
+            <tr>
+              <td>Durasi</td>
+              <td>Maks 4 Jam</td>
+              <td>Maks 8 Jam</td>
+              <td>Sesuai Permintaan</td>
+            </tr>
+            <tr>
+              <td>Harga Mulai</td>
+              <td>Rp 1.500.000</td>
+              <td>Rp 3.500.000</td>
+              <td>Negosiasi</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button class="btn-small">Pilih Paket A</button></td>
+              <td><button class="btn-small">Pilih Paket B</button></td>
+              <td>
+                <button class="btn-small scroll-to-form">Kustomisasi</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="customize-package" class="customize-package">
+      <h2>Kustomisasi <span>Paket Anda</span></h2>
+      <p class="section-description">
+        Tidak menemukan yang sesuai? Buat paket katering atau acara impian Anda
+        sendiri!
+      </p>
+
+      <form class="custom-package-form">
+        <div class="form-group">
+          <label for="custName">Nama Lengkap:</label>
+          <input type="text" id="custName" required />
+        </div>
+        <div class="form-group">
+          <label for="custEmail">Email:</label>
+          <input type="email" id="custEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="custPhone">Nomor Telepon:</label>
+          <input type="tel" id="custPhone" />
+        </div>
+        <div class="form-group">
+          <label for="eventType">Jenis Acara:</label>
+          <select id="eventType" required>
+            <option value="">-- Pilih Jenis Acara --</option>
+            <option value="pernikahan">Pernikahan</option>
+            <option value="ulang_tahun">Ulang Tahun</option>
+            <option value="korporat">Acara Korporat</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="eventDate">Tanggal Acara:</label>
+          <input type="date" id="eventDate" required />
+        </div>
+        <div class="form-group">
+          <label for="attendees">Jumlah Tamu Estimasi:</label>
+          <input type="number" id="attendees" min="1" required />
+        </div>
+        <div class="form-group">
+          <label for="packageDetails">Detail Kebutuhan Paket Anda:</label>
+          <textarea
+            id="packageDetails"
+            rows="5"
+            placeholder="Contoh: Kami butuh katering untuk 100 orang, dengan 3 jenis kopi premium, 2 barista, dan proyektor..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-primary">
+          Kirim Permintaan Kustomisasi
+        </button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <footer>
+      <div class="sosials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="tiktok"></i></a>
+      </div>
+
+      <div class="credit">
+        <p>Dibuat oleh <a href="">Gabriel Ketarou</a>. | &copy; 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/servis.js"></script>
+  </body>

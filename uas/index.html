@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kedai Kopi Senja - Kopi Terbaik untuk Setiap Momen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">kedai<span>senja</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Tentang kami</a>
+        <a href="services.html">Services</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamberger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div
+        class="hero-bg-parallax"
+        style="
+          background-image: url('img/kobby-mendez-iyM-XTsTiek-unsplash.jpg');
+        "
+      ></div>
+      <main class="content">
+        <h1>Nikmati Secangkir <span>Kopi Terbaik</span></h1>
+        <p class="typing-effect"></p>
+        <a href="#about" class="cta-button">Jelajahi Sekarang</a>
+      </main>
+    </section>
+
+    <section id="statistics-section" class="statistics-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="15000">0</h3>
+          <p class="stat-label">Pelanggan Puas</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="250">0</h3>
+          <p class="stat-label">Acara Terlayani</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="98">0</h3>
+          <p class="stat-label">Tingkat Keberhasilan (%)</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="12">0</h3>
+          <p class="stat-label">Tahun Berpengalaman</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Tentang <span>Kami</span></h2>
+      <div class="row">
+        <div class="about-img">
+          <img
+            src="img/jonas-jacobsson-RFHFV7lVQBY-unsplash.jpg"
+            alt="Tentang Kami"
+          />
+        </div>
+        <div class="content">
+          <h3>Mengapa memilih kopi kami?</h3>
+          <p>
+            Kedai Kopi Senja hadir untuk memberikan pengalaman kopi terbaik.
+            Kami memilih biji kopi pilihan dari berbagai penjuru Nusantara dan
+            menyajikannya dengan passion dan keahlian.
+          </p>
+          <p>
+            Setiap cangkir adalah cerita, dari biji yang dipetik hingga
+            kehangatan yang Anda rasakan. Kami berkomitmen pada kualitas,
+            keberlanjutan, dan komunitas.
+          </p>
+          <a href="about.html" class="cta-button">Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Apa Kata <span>Mereka</span></h2>
+      <p class="section-description">
+        Dengar langsung dari pelanggan kami yang puas tentang pengalaman mereka
+        dengan Kedai Kopi Senja.
+      </p>
+
+      <div class="testimonial-carousel-container">
+        <div class="testimonial-carousel"></div>
+        <button class="carousel-nav prev-btn">&#10094;</button>
+        <button class="carousel-nav next-btn">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots"></div>
+    </section>
+
+    <footer>
+      <div class="sosials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="tiktok"></i></a>
+      </div>
+
+      <div class="credit">
+        <p>Dibuat oleh <a href="">Gabriel Ketarou</a>. | &copy; 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/index-script.js"></script>
+  </body>
+</html>
